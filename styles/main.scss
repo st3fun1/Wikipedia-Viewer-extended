@@ -1,0 +1,122 @@
+//VARIABLES
+$tomato: tomato;
+$white: white;
+$black: black;
+$fontSize: 16px;
+$searchBoxWidth: 10em;
+$searchIconURL: 'https://images.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn4.iconfinder.com%2Fdata%2Ficons%2Feldorado-basic%2F40%2Fsearch-512.png&f=1';
+//Strings
+$srch: 'search';
+
+//Imports
+@import url('');
+
+/*------------------------------------/
+|              GENERAL               |
+/------------------------------------*/
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+}
+body { 
+    background-color: $tomato;
+    font-size: $fontSize;
+
+}
+
+
+/*------------------------------------/
+|            SEARCH BOX              |
+/------------------------------------*/
+
+.#{$srch} {
+    &-area {
+       /* position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        -webkit-transform:translate(-50%,-50%);*/
+        margin:2em 0;
+        p {
+            margin-top:0.5em;
+            font-weight: bold;
+        }
+        
+        button, .clear-input-button {
+            margin-right:-2.5em;
+            background-color:inherit;
+            border: none;
+            padding:0.5em;
+            outline:none;
+            margin-top:0.5em;
+        }
+    }
+    &-box {
+        width: $searchBoxWidth;
+        background-color:$tomato;
+        outline: none;
+        height:2.5em;
+        padding:1em;
+        border-radius:5em;
+        border:3px solid black;
+        transition: 1s width ease;
+        &:hover {
+            width: $searchBoxWidth*1.5;  
+        }
+    }
+}
+.clear-input-button {
+    position:absolute;
+    margin-left:-2em;
+    margin-top: 0.5em;
+    padding:0.5em;
+    border:none;
+    background-color:inherit;
+    font-weight: bold;
+}
+
+.search-button {
+    position:absolute;
+    margin-right:-3em;
+    width:3em;
+    height:3em;
+    margin-top: 0.5em;
+    border:none;
+  /*  background-color:inherit;*/
+    background-image:url($searchIconURL);
+    background-repeat: no-repeat;
+}
+
+input[type='search'] {
+    text-align: center;
+}
+
+/*------------------------------------/
+|             CONTENT                |
+/------------------------------------*/
+.content {
+    color: $black;
+    background-color:$white;
+    margin-bottom: 2em;
+    transition: 0.2s all;
+    -webkit-transition:0.2s all;
+    transition-timing-function: ease-in-out;
+    padding: 1em;
+    &:hover{
+        border-left:0.4em solid $black;
+        font-size: 1.1em;
+    }
+}
+a.external-content {
+    text-decoration: none;
+}
+
+/*------------------------------------/
+|              SEARCH BUTTON         |
+/------------------------------------*/
+
+
+
+

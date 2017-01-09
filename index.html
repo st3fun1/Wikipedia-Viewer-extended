@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wikipedia Viewer</title>
+  <link rel="stylesheet" href="./wikiAssets/normalize.css"/>
+  <link rel="stylesheet" href="./wikiAssets/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/main.css"/> 
+</head>
+<body>
+
+
+  <div class="container-fluid main-content" id="#top">
+        <div class="row search-area">
+            
+            <div class="col-xs-12 text-center">
+                <div class="row">
+                  <div class="col-md-6 col-md-offset-3">
+                        <h1 class="site-title"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png" alt="wikipedia-logo" />Wikipedia Viewer</h1>
+                  </div>
+                </div>
+                <div class="">
+                    <span><input type="search" name="search" class="search-box" results/></span>
+                    <input type="button" name="clear-content" class="clear-input-button" value="&#xf00d;"/>
+                    <div class="autocomplete-text">
+
+                    </div>
+                    <p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><i class="fa fa-random" aria-hidden="true"></i> Random Article</a>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row results text-center">
+        </div>
+  </div>
+  <div class="arrow">
+    More results
+    <i class="fa fa-arrow-circle-down bounce" aria-hidden="true"></i> 
+  </div>
+  <footer class="footer">
+        <a href="#top">Back to top</a>
+  </footer>
+  <script src="./wikiAssets/jquery.min.js"></script>
+  <script src="./wikiAssets/bootstrap.min.js"></script>    
+  <script src="scripts/app.js"></script>
+    
+</body>
+</html>
